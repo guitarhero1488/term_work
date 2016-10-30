@@ -69,42 +69,6 @@ namespace Mia_Voice
             e.Cancel = true;
         }
 
-        private void MenuRecord_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (!MenuRecord.Checked)
-                {
-                    MenuRecord.Checked = true;
-                    MessageBox.Show("Start Recording");
-                    waveIn = new WaveIn();
-                    //Дефолтное устройство для записи (если оно имеется)
-                    //встроенный микрофон ноутбука имеет номер 0
-                    waveIn.DeviceNumber = 0;
-                    //Прикрепляем к событию DataAvailable обработчик, возникающий при наличии записываемых данных
-                    waveIn.DataAvailable += waveIn_DataAvailable;
-                    //Прикрепляем обработчик завершения записи
-                    waveIn.RecordingStopped += new EventHandler<StoppedEventArgs>(waveIn_RecordingStopped);
-                    //Формат wav-файла - принимает параметры - частоту дискретизации и количество каналов(здесь mono)
-                    waveIn.WaveFormat = new WaveFormat(8000, 1);
-                    //Инициализируем объект WaveFileWriter
-                    writer = new WaveFileWriter(outputFilename, waveIn.WaveFormat);
-                    //Начало записи
-                    waveIn.StartRecording();
-                }
-                else
-                {
-                    if (waveIn != null)
-                    {
-                        StopRecording();
-                    }
-                }
-                
-            }
-            catch (Exception ex)
-            { MessageBox.Show(ex.Message); }
-        }
-
         void StopRecording()
         {
             MessageBox.Show("StopRecording");
@@ -132,12 +96,14 @@ namespace Mia_Voice
                     writer = new WaveFileWriter(outputFilename, waveIn.WaveFormat);
                     //Начало записи
                     waveIn.StartRecording();
+                    MenuRecord.Text = "Остановить запись";
                 }
                 else
                 {
                     if (waveIn != null)
                     {
                         StopRecording();
+                        MenuRecord.Text = "Начать запись";
                     }
                 }
 

@@ -65,11 +65,11 @@
             // 
             // MenuRecord
             // 
+            this.MenuRecord.CheckOnClick = true;
             this.MenuRecord.Name = "MenuRecord";
             this.MenuRecord.Size = new System.Drawing.Size(134, 22);
             this.MenuRecord.Text = "Начать запись";
             this.MenuRecord.CheckedChanged += new System.EventHandler(this.MenuRecord_CheckedChanged);
-            this.MenuRecord.Click += new System.EventHandler(this.MenuRecord_Click);
             // 
             // MenuSettings
             // 
