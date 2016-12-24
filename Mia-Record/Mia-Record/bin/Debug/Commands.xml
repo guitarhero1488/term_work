@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Commands>
+  <Command Audio_URL="SoundCollection/OpenBrowser1.wav" Program_URL="http://vk.com" />
+  <Command Audio_URL="SoundCollection/OpenBrowser2.wav" Program_URL="http://vk.com" />
+  <Command Audio_URL="SoundCollection/OpenBrowser3.wav" Program_URL="http://vk.com" />
+  <Command Audio_URL="SoundCollection/OpenBrowser4.wav" Program_URL="http://vk.com" />
+  <Command Audio_URL="SoundCollection/OpenBrowser5.wav" Program_URL="http://vk.com" />
+  <Command Audio_URL="SoundCollection/OpenBrowser6.wav" Program_URL="http://vk.com" />
+  <Command Audio_URL="SoundCollection/OpenBrowser7.wav" Program_URL="http://vk.com" />
+  <Command Audio_URL="SoundCollection/OpenBrowser8.wav" Program_URL="http://vk.com" />
+  <Command Audio_URL="SoundCollection/OpenBrowser9.wav" Program_URL="http://vk.com" />
+  <Command Audio_URL="SoundCollection/OpenBrowser10.wav" Program_URL="http://vk.com" />
+  <Command Audio_URL="SoundCollection / Test.wav" Program_URL="C:\Users\dimon\Pictures\Dedulya.png" />
+</Commands>
