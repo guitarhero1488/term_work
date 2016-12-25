@@ -2,14 +2,6 @@
 using System.Windows.Forms;
 using NAudio.Wave;
 using System.Runtime.InteropServices;
-using System.Drawing;
-using System.IO;
-using System.Data;
-using System.Linq;
-using System.Collections.Generic;
-using System.Xml.Serialization;
-using System.Xml.Linq;
-using System.Xml;
 
 namespace Mia_Record
 {
@@ -19,15 +11,14 @@ namespace Mia_Record
         {
             InitializeComponent();
             RegisterHotKey(Handle, 1, MOD_CONTROL + MOD_SHIFT, (int)Keys.R);
-
             myCommands.LoadCommands();
             CommandList.Items.Clear();
             for (int i = 0; i < myCommands.CommandList.Length; i++)
             {
                 CommandList.Items.Add(myCommands.CommandList[i].Audio_URL);
-            };
+            }
         }
-
+        
         Commands myCommands = new Commands();
         Signal mySignal = new Signal();
         WaveIn waveIn;
@@ -76,30 +67,6 @@ namespace Mia_Record
             DScreen.Close();
         }
 
-        //---------------------------------------------------------------------------------------------
-
-        private void MainForm_Shown(object sender, EventArgs e)
-        {
-            Hide();
-        }
-
-        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Hide();
-            e.Cancel = true;
-        }
-
-        private void Settings_Click(object sender, EventArgs e)
-        {
-            Show();
-        }
-
-        private void Exit_Click(object sender, EventArgs e)
-        {
-            UnregisterHotKey(Handle, 1);
-            Environment.Exit(0);
-        }
-
         [DllImport("user32.dll")]
         private static extern bool RegisterHotKey(IntPtr hWnd, int id, int fsModifiers, int vk);
 
@@ -132,7 +99,7 @@ namespace Mia_Record
             for (int i = 0; i < myCommands.CommandList.Length; i++)
             {
                 CommandList.Items.Add(myCommands.CommandList[i].Audio_URL);
-            };
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -144,13 +111,37 @@ namespace Mia_Record
                 for (int i = 0; i < myCommands.CommandList.Length; i++)
                 {
                     CommandList.Items.Add(myCommands.CommandList[i].Audio_URL);
-                };
+                }
             }
         }
 
         private void Git_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/guitarhero1488/term_work");
+        }
+
+        //---------------------------------------------------------------------------------------------
+
+        private void MainForm_Shown(object sender, EventArgs e)
+        {
+            Hide();
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Hide();
+            e.Cancel = true;
+        }
+
+        private void Settings_Click(object sender, EventArgs e)
+        {
+            Show();
+        }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            UnregisterHotKey(Handle, 1);
+            Environment.Exit(0);
         }
     }
 }

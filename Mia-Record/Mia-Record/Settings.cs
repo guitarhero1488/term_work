@@ -43,14 +43,11 @@ namespace Mia_Record
             if (wcount == 0 && waveIn != null)
             {
                 waveIn.StopRecording();
-                button1.Enabled = false;
-                button1.Text = "Назначение...";
                 timer1.Stop();
                 wcount = 4;
             }
         }
-
-        // Обработка речи - вычисляем, есть ли сама речь на звуковом отрезке
+        
         private bool ProcessData(WaveInEventArgs e)
         {
             double threshold = 0.05;
@@ -86,13 +83,9 @@ namespace Mia_Record
 
         void waveIn_DataAvailable(object sender, WaveInEventArgs e)
         {
-            //bool result = ProcessData(e);
-            //if (result == true)
-            //{
             byte[] buffer = e.Buffer;
             writer.Write(e.Buffer, 0, e.BytesRecorded);
             writer.Flush();
-            //}
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -107,15 +100,12 @@ namespace Mia_Record
                 writer = new WaveFileWriter("SoundCollection/" + textBox1.Text + ".wav", waveIn.WaveFormat);
                 waveIn.StartRecording();
                 timer1.Enabled = !timer1.Enabled;
-                button1.Enabled = false;
-                button1.Text = "Запись...";
                 DScreen.ShowDialog();
             }
             else
             {
                 MessageBox.Show("Заполните все поля.");
             }
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -124,10 +114,6 @@ namespace Mia_Record
             {
                 textBox2.Text = openFileDialog1.FileName;
             }
-        }
-
-        private void Settings_FormClosed(object sender, FormClosedEventArgs e)
-        {
-        }
+        }        
     }
 }

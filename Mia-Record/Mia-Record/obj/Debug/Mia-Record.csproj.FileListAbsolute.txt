@@ -55,3 +55,16 @@ g:\Kursach-MMAD\Mia-Record\Mia-Record\obj\Debug\Mia_Record.Settings.resources
 g:\Kursach-MMAD\Mia-Record\Mia-Record\obj\Debug\Mia-Record.csproj.GenerateResource.Cache
 g:\Kursach-MMAD\Mia-Record\Mia-Record\obj\Debug\Mia_Record.DimScreen.resources
 g:\Kursach-MMAD\Mia-Record\Mia-Record\bin\Debug\Commands.xml
+F:\Учеба\ММАД\term_work\Mia-Record\Mia-Record\bin\Debug\Mia-Record.exe.config
+F:\Учеба\ММАД\term_work\Mia-Record\Mia-Record\bin\Debug\Commands.xml
+F:\Учеба\ММАД\term_work\Mia-Record\Mia-Record\bin\Debug\Mia-Record.exe
+F:\Учеба\ММАД\term_work\Mia-Record\Mia-Record\bin\Debug\Mia-Record.pdb
+F:\Учеба\ММАД\term_work\Mia-Record\Mia-Record\bin\Debug\NAudio.dll
+F:\Учеба\ММАД\term_work\Mia-Record\Mia-Record\obj\Debug\Mia-Record.csprojResolveAssemblyReference.cache
+F:\Учеба\ММАД\term_work\Mia-Record\Mia-Record\obj\Debug\Mia_Record.DimScreen.resources
+F:\Учеба\ММАД\term_work\Mia-Record\Mia-Record\obj\Debug\Mia_Record.MainForm.resources
+F:\Учеба\ММАД\term_work\Mia-Record\Mia-Record\obj\Debug\Mia_Record.Properties.Resources.resources
+F:\Учеба\ММАД\term_work\Mia-Record\Mia-Record\obj\Debug\Mia_Record.Settings.resources
+F:\Учеба\ММАД\term_work\Mia-Record\Mia-Record\obj\Debug\Mia-Record.csproj.GenerateResource.Cache
+F:\Учеба\ММАД\term_work\Mia-Record\Mia-Record\obj\Debug\Mia-Record.exe
+F:\Учеба\ММАД\term_work\Mia-Record\Mia-Record\obj\Debug\Mia-Record.pdb
